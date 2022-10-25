@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-qa=eqd&68szk+9sgjh66vk8w*12k92b8s=bcscq(ikxmx@-78t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'proyecto_API.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.pg2',
-        'HOST':'ec2-3-220-207-90.compute-1.amazonaws.com',
-        'NAME':'d7k3tn31tqf3od',
-        'USER':'yhfzdqvmlbuqcq',
+        'HOST':'ec2-34-199-68-114.compute-1.amazonaws.com',
+        'NAME':'dhr5q4e23hlg2',
+        'USER':'efdoahvpeoicap',
         'PORT': '5432',
-        'PASSWORD':'9a731ef853ddc5bc338972bdf68ff80d81df06c881888b8552e79d5a8701c9e8',
+        'PASSWORD':'194cae0bb699ce20987944a81f836d142b3f925eb55a965ebb0d818910c03bae',
         
         #  'HOST':'127.0.0.1',
         # 'PORT': '3306',
