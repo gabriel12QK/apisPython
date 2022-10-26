@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-qa=eqd&68szk+9sgjh66vk8w*12k92b8s=bcscq(ikxmx@-78t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pythonapilogroa.herokuapp.com']
 
 
 # Application definition
@@ -38,11 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api',
-    'django_seed'
+    'corsheaders',
 
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -78,12 +79,12 @@ WSGI_APPLICATION = 'proyecto_API.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.pg2',
-        'HOST':'ec2-34-199-68-114.compute-1.amazonaws.com',
-        'NAME':'dhr5q4e23hlg2',
-        'USER':'efdoahvpeoicap',
+        'ENGINE': 'django.db.backends.postgresql',
+        'HOST':'ec2-34-235-31-124.compute-1.amazonaws.com',
+        'NAME':'dcjm5787bl09c',
+        'USER':'swbeoiqnfpgpvb',
         'PORT': '5432',
-        'PASSWORD':'194cae0bb699ce20987944a81f836d142b3f925eb55a965ebb0d818910c03bae',
+        'PASSWORD':'8e7143092f71071bf82ddf70571e720aac6e4d4b76a4903ffe5cce1ae7ba2b35'
         
         #  'HOST':'127.0.0.1',
         # 'PORT': '3306',
@@ -130,6 +131,10 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+CORS_ALLOWED_ORIGINS = [
+    "http://logroa-devops.s3-website-us-east-1.amazonaws.com/"
+]
 
 
 # Static files (CSS, JavaScript, Images)
